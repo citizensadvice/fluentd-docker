@@ -12,6 +12,7 @@ RUN apk add --no-cache --update --virtual .build-deps \
         fluent-plugin-ec2-metadata \
         fluent-plugin-ec2-metadata \
         fluent-plugin-rewrite-tag-filter \
+        fluent-plugin-sumologic_output \
  && gem sources --clear-all \
  && apk del .build-deps \
  && rm -rf /home/fluent/.gem/ruby/2.3.0/cache/*.gem
