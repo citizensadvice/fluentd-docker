@@ -10,7 +10,8 @@ RUN apk add --no-cache --update --virtual .build-deps \
         fluent-plugin-s3 \
         fluent-plugin-multi-format-parser \
         fluent-plugin-ec2-metadata \
-
+        fluent-plugin-ec2-metadata \
+        fluent-plugin-rewrite-tag-filter \
  && gem sources --clear-all \
  && apk del .build-deps \
  && rm -rf /home/fluent/.gem/ruby/2.3.0/cache/*.gem
