@@ -5,11 +5,9 @@ USER root
 
 RUN apk add --no-cache --update --virtual .build-deps \
         build-base ruby-dev \
-
  && gem install \
         fluent-plugin-s3 \
         fluent-plugin-multi-format-parser \
-        fluent-plugin-ec2-metadata \
         fluent-plugin-ec2-metadata \
         fluent-plugin-rewrite-tag-filter \
         fluent-plugin-sumologic_output \
