@@ -1,4 +1,4 @@
-FROM fluent/fluentd:v1.3.3-onbuild-1.0
+FROM fluent/fluentd:v1.4.2-onbuild-2.0
 MAINTAINER ca-devops@citizensadvice.org.uk
 
 USER root
