@@ -5,7 +5,7 @@ USER root
 
 RUN apk add --no-cache --update --virtual .build-deps \
         build-base ruby-dev \
- && gem install fluent-plugin-s3 -v 1.1.9 \
+ && gem install fluent-plugin-s3 -v 1.2.0 \
  && gem install fluent-plugin-multi-format-parser -v 1.0.0 \
  && gem install fluent-plugin-ec2-metadata -v 0.1.2 \
  && gem install fluent-plugin-rewrite-tag-filter -v 2.2.0 \
