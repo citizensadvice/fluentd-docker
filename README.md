@@ -130,3 +130,18 @@ You also need these mounts:
    ]
 }
 ```
+
+## Releasing
+
+Manual release, the docker tag must match the tag in the `FROM` directive in the [Dockerfile](./Dockerfile):
+
+```bash
+docker build . -t fluentd
+# push to cita-devops
+docker tag fluentd 979633842206.dkr.ecr.eu-west-1.amazonaws.com/fluentd:v1.13-1
+docker push 979633842206.dkr.ecr.eu-west-1.amazonaws.com/fluentd:v1.13-1
+
+# push to cab-prod so beanstalk can pull it
+docker tag fluentd 170181076180.dkr.ecr.eu-west-1.amazonaws.com/fluentd:v1.13-1
+docker push 170181076180.dkr.ecr.eu-west-1.amazonaws.com/fluentd:v1.13-1
+```
