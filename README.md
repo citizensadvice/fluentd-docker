@@ -1,6 +1,6 @@
-# CA Fluentd docker image for use with AWS Beanstalk
+# CA Fluentd docker image
 
-This setup extends the official [fluent/fluent image](https://hub.docker.com/r/fluent/fluentd/) and is tailored for use with the ElasticBeanstalk's multi-container platform.
+This setup extends the official [fluent/fluent image](https://hub.docker.com/r/fluent/fluentd/) and is tailored for use with the ElasticBeanstalk's multi-container platform and EKS.
 
 
 ## Usage
