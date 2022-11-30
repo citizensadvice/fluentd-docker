@@ -10,6 +10,7 @@ RUN apk add --no-cache --update --virtual .build-deps build-base ruby-dev \
         && gem install fluent-plugin-rewrite-tag-filter -v 2.4.0 \
         && gem install fluent-plugin-sumologic_output -v 1.7.2 \
         && gem install fluent-plugin-parser-cri -v 0.1.1 \
+        && gem install fluent-plugin-concat -v 2.5.0 \
         && gem sources --clear-all \
         && apk del .build-deps \
         && rm -rf /home/fluent/.gem/ruby/*/cache/*.gem
