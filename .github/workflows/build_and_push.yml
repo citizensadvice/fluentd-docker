@@ -1,0 +1,24 @@
+name: Build and publish to private ECR
+
+on:
+  push:
+    branches:
+      - master
+    tags:
+      - v*      
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+    - name: Build and push to ECR
+      uses: citizensadvice/build-and-private-ecr-push-action@v1
+      with:
+        dockerfile_context: '.'
+        repository_name: fluentd
+        multiarch_build: 'enabled'
+        auth_token: ${{ secrets.GITHUB_TOKEN }}
+        prod_image: true
