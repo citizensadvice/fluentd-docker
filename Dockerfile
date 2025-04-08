@@ -1,4 +1,4 @@
-FROM fluent/fluentd:v1.16.2-1.1
+FROM fluent/fluentd:v1.18.0-1.0
 LABEL author="ca-devops@citizensadvice.org.uk"
 
 USER root
